@@ -38,6 +38,7 @@ let isbn = document.getElementById("isbn")
 let data = document.getElementById("data")
 let left = document.getElementById("leftbutton")
 let right = document.getElementById("rightbutton")
+let bilatu = document.getElementById("bilatu")
 
 const IMG1 = "https://covers.openlibrary.org/b/id/"
 let argazkia = document.getElementById("argazkia")
@@ -69,6 +70,19 @@ let eskubira = () => {
     change_book(index)
 }
 
+//Liburua isbn bidez bilatzeko funtzioa
+let bilatuisbn = () => {
+  let index2 = liburuak.findIndex(l => l.isbn === isbn.value);
+
+  if (index2 !== -1) {
+    index = index2
+    change_book(index);
+  } else {
+    alert("Liburua ez da aurkitu.");
+  }
+}
+
 //Botoiei Event Listener-ak gehitu
 left.addEventListener("click", ezkerrera)
 right.addEventListener("click", eskubira)
+bilatu.addEventListener("click", bilatuisbn)
