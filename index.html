@@ -3,20 +3,34 @@
 
 		<link href="estiloak.css" rel="stylesheet">
 	</head>
+	<style>
+		input{
+			margin-top: 35px;
+		}
+		img{
+			margin: 15px;
+		}
+	</style>
 	<body>
 
 	<div class="flex-container">
 
 	  <div class="flex left">
-	    Flex Column 1
+	    <img id="argazkia">
 	  </div>
 
 	  <div class="flex right">
-	    Flex Column 2
+	    <form>
+			Izenburua: <input type="text" id="izenburua" size="70"><br>
+			Egilea: <input type="text" id="egilea"><br>
+			ISBN: <input type="text" id="isbn"><br>
+			Data: <input type="text" id="data"><br>
+			<input type="button" value="<<" id="leftbutton">
+			<input type="button" value=">>" id="rightbutton">
+		</form>
 	  </div>
-
 	</div>
-
     </body>
+	<script src="main.js"></script>
 </html>
 
